@@ -192,6 +192,12 @@ nav .nav__2 {
   gap: 20px;
 }
 
+@media only screen and (min-width: 768px) {
+  nav .nav__2 {
+    gap: 50px;
+  }
+}
+
 nav .nav__2-icon {
   height: 20px;
   position: relative;

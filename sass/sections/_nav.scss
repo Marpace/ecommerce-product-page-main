@@ -102,7 +102,9 @@ nav {
         justify-content: flex-end;
         flex-basis: 40%;
         gap: 20px;
-
+        @include responsive($tablet){
+            gap: 50px;
+        }
 
         &-icon {
             height: 20px;
