@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    @include responsive($tablet_large) {
+        @include flex_centered(row);
+        flex-wrap: nowrap;
+        gap: 6vw;
+        height: 97vh;
+    }
+    @include responsive($desktop){
+        gap: 8vw;
+    }
+}
+
+

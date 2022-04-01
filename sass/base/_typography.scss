@@ -1,0 +1,18 @@
+body{
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: $very_dark_blue;
+}
+p {
+    color: $dark_grayish_blue;
+}
+
+p, h1, img, button {
+    user-select: none;
+}

@@ -1,0 +1,124 @@
+.item-info {
+    padding: 22px 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    @include responsive($tablet){
+        padding: 22px 15%;
+    }
+    @include responsive($tablet_large){
+        padding: 0;
+        flex-basis: 30%;
+        max-width: 450px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        @include responsive($tablet_large){
+            font-size: 2rem;
+        }
+        @include responsive($desktop){
+            font-size: 2.5rem;
+        }
+    }
+    &__company {
+        font-size: .8rem;
+        font-weight: 700;
+        color: $orange;
+        letter-spacing: 2px;
+    }
+    &__description {
+        font-size: .95rem;
+        line-height: 1.5;
+        color: $dark_grayish_blue;
+    }
+    &__price {
+        position: relative;
+        @include flex_centered(row);
+        justify-content: space-between;
+        @include responsive($desktop){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+
+        h1 {
+            font-size: 1.8rem;
+        }
+        .percent {
+            @include flex_centered(row);
+            padding: 3px;
+            width: 50px;
+            border-radius: 5px;
+            color: $orange;
+            font-weight: 700;
+            background-color: $pale_orange;
+            position: absolute;
+            left: 120px;
+            @include responsive($desktop){
+                top: 4px;
+            }
+        }
+        p {
+            text-decoration: line-through;
+            color: $dark_grayish_blue;
+        }
+    }
+    .item-info__buttons {
+        @include flex_centered(column);
+        gap: 20px;
+        @include responsive($tablet_large){
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 10px;
+
+            .item-info__quantity {
+                flex-basis: 50%;
+            }
+            .add-to-cart {
+                flex-basis: 70%;
+            }
+        }
+
+
+        .item-info__quantity {
+            width: 100%;
+            @include flex_centered(row);
+            justify-content: space-between;
+            padding: 20px;
+            background-color: $light_grayish_blue;
+            border-radius: 10px;
+
+            p {
+                color: $very_dark_blue;
+                font-weight: 700;
+            }
+            svg {
+                fill: #FF7E1B; 
+            }
+            svg:hover {
+                cursor: pointer;
+                fill: #f7ccab;
+            }
+        }
+        .add-to-cart {
+            padding: 20px;
+            width: 100%;
+            @include flex_centered(row);
+            gap: 10px;
+            background-color: $orange;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: "Kumbh sans", sans-serif;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px 0 rgba($color: #a14f01, $alpha: .2);
+            cursor: pointer;
+            transition: .2s;
+        }
+        .add-to-cart:hover {
+            background-color: #f7ccab;
+        }
+    }
+}

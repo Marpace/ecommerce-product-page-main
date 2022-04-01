@@ -1,0 +1,82 @@
+.active {
+    border: 3px solid $orange;
+}
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1100;
+    @include flex_centered(column);
+    gap: 30px;
+
+    &__close {
+        width: 50%;
+        max-width: 600px;
+        display: flex;
+        justify-content: flex-end;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+    &__img {
+        width: 50%;
+        max-width: 600px;
+        position: relative;
+
+        img {
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
+    &__control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        border-radius: 50%;
+        background: white;
+        @include flex_centered(row);
+        cursor: pointer;
+    }
+    svg {
+        stroke: black;
+    }
+    &__control:hover > svg {
+        stroke: $orange;
+    }
+    &__previous {
+        left: -30px;
+    }
+    &__next {
+        right: -30px;
+    }
+    &__thumbnails {
+        width: 40%;
+        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        
+        div {
+            width: 20%;
+            background-color: white;
+            border-radius: 10px;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: .2s;
+            }
+            img:hover {
+                filter: opacity(60%);
+            }
+        }
+    }
+}

@@ -2,43 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="sass/main.css">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <header>
+    <nav>
+      <div class="nav__1">
+        <div class="nav__menu-backdrop js-backdrop"></div>
+        <img class="js-toggler" src="images/icon-menu.svg" alt="">
+        <img src="images/logo.svg" alt="">
+        <div class="nav__menu js-nav-menu">
+          <img class="js-menu-close" src="images/icon-close.svg" alt="">
+          <ul>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav__2">
+        <div class="nav__2-icon">
+          <!-- <img src="images/icon-cart.svg" alt=""> -->
+          <svg class="cart-icon" width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill-rule="nonzero"/></svg>
+          <div class="cart-notification"></div>
+        </div>
+        <img class="avatar" src="images/image-avatar.png" alt="">
+      </div>
+    </nav>
 
-  Sneaker Company
+  </header>
 
-  Fall Limited Edition Sneakers
+  <main>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+    <section class="slider">
+      <img class="slider__img js-slider-img" src="images/image-product-4.jpg" alt="">
+      <img class="slider__img js-slider-img" src="images/image-product-3.jpg" alt="">
+      <img class="slider__img js-slider-img" src="images/image-product-2.jpg" alt="">
+      <img class="slider__img js-slider-img js-big-img" src="images/image-product-1.jpg" alt="">
+      <div class="slider__control slider__previous js-slider-previous">
+        <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="4" fill="none" fill-rule="evenodd"/></svg>
+      </div>
+      <div class="slider__control slider__next js-slider-next">
+        <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="4" fill="none" fill-rule="evenodd"/></svg>
+      </div>
+      <div class="thumbnails">
+        <img class="active" src="images/image-product-1-thumbnail.jpg" alt="">
+        <img src="images/image-product-2-thumbnail.jpg" alt="">
+        <img src="images/image-product-3-thumbnail.jpg" alt="">
+        <img src="images/image-product-4-thumbnail.jpg" alt="">
+      </div>
+    </section>
 
-  $125.00
-  50%
-  $250.00
+    <section class="lightbox">
+      <div class="lightbox__close">
+        <svg class="js-lightbox-close" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="1.5929" y1="15.9154" x2="15.7566" y2="1.75176" stroke="#FF7E1B" stroke-width="3"/>
+          <line x1="2.06066" y1="1.93934" x2="16.2243" y2="16.103" stroke="#FF7E1B" stroke-width="3"/>
+          </svg>          
+      </div>
+      <div class="lightbox__img">
+        <img class="js-slider-img js-big-img" src="images/image-product-1.jpg" alt="">
+        <div class="lightbox__control lightbox__previous js-lightbox-previous">
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8"  stroke-width="4" fill="none" fill-rule="evenodd"/></svg>
+        </div>
+        <div class="lightbox__control lightbox__next js-lightbox-next">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8"  stroke-width="4" fill="none" fill-rule="evenodd"/></svg>
+        </div>
+      </div>
 
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="lightbox__thumbnails">
+        <div><img src="images/image-product-1-thumbnail.jpg" alt=""></div>
+        <div><img src="images/image-product-2-thumbnail.jpg" alt=""></div>
+        <div><img src="images/image-product-3-thumbnail.jpg" alt=""></div>
+        <div><img src="images/image-product-4-thumbnail.jpg" alt=""></div>
+      </div>
+    </section>
+
+    <section class="item-info">
+      <p class="item-info__company">SNEAKER COMPANY</p>
+      <h1 class="item-info__title">Fall Limited Edition Sneakers</h1>
+      <p class="item-info__description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="item-info__price">
+        <h1>$125.00</h1>
+        <div class="percent" style="user-select: none;">50%</div>
+        <p>$250.00</p>
+      </div>
+      <div class="item-info__buttons">
+        <div class="item-info__quantity">
+          <svg class="js-minus" width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill-rule="nonzero" xlink:href="#a"/></svg>
+          <p class="counter">0</p>
+          <svg class="js-plus" width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use  fill-rule="nonzero" xlink:href="#b"/></svg>
+        </div>
+        <button class="add-to-cart js-add-to-cart">
+          <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fefefe" fill-rule="nonzero"/></svg>
+          Add to cart
+        </button>
+      </div>
+    </section>
+
+
+   
+    <div class="cart js-cart">
+      <div class="cart__top">
+        <p>Cart</p>
+      </div>
+      <div class="cart__bottom">
+        <p class="empty">Your cart is empty.</p>
+
+        <div class="cart__item">
+          <img class="cart__item-img" src="images/image-product-1-thumbnail.jpg" alt="">
+          <div class="text">
+            <p>Autumn Limited Edition...</p>
+            <p class="cart__item-sum" style="display: inline;"></p>
+            <p class="cart__item-total" style="display: inline;"></p>
+          </div>
+          <img class="cart__item-icon js-delete-item" src="images/icon-delete.svg" alt="">
+        </div>
+        <button class="checkout">Checkout</button>
+      </div>
+    </div>
+    
+
+    
+   
+    
+  </main>
+  <footer>
+    <div class="attribution" style="font-size: 11px; text-align: center; margin-bottom: 10px;">
+       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+       Coded by <a href="https://www.frontendmentor.io/profile/Marpace" style="color: hsl(228, 45%, 44%);">Pablo Almonacid</a>.
+     </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js"></script>
+
 </body>
 </html>
