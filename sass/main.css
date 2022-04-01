@@ -48,7 +48,7 @@ p {
   color: #68707d;
 }
 
-p, h1, img, button {
+p, h1, img, button, a {
   user-select: none;
 }
 
