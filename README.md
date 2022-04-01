@@ -43,6 +43,7 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [Sass](https://sass-lang.com/) - CSS preprocessor
+- [Jquery](https://jquery.com/) - Javascript library
 
 ## Author
 
